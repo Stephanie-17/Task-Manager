@@ -15,7 +15,7 @@ const TaskInput = ({
            
 			<form
 				action=""
-				className="flex flex-row  items-start  sm:items-center gap-2 ml-1 mt-4"
+				className="flex flex-row  items-start  sitems-center gap-2 ml-1 mt-4"
 				onSubmit={(e) => handleSubmit(e)}
 			>
 				<input
