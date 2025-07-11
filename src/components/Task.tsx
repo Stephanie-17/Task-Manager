@@ -36,7 +36,7 @@ const Task = ({ id, name, status, setTasks }: TaskProps) => {
 			<div className="flex gap-3.5 items-center-safe">
 				<input
 					type="checkbox"
-					className="p-6 w-5 h-5 cursor-pointer accent-[#1500ff]"
+					className="p-6 w-5 h-5 cursor-pointer accent-[#1500ff] dark:border-[#918CCF] dark:bg-[#120F24]"
 					onChange={() => toggleStatus(id)}
 				/>
 				<svg

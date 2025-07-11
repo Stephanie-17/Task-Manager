@@ -9,7 +9,7 @@ import type { TaskObject } from "./types";
 function App() {
 	const [inputValue, setInputValue] = useState("");
 	const [tasks, setTasks] = useState<TaskObject[]>([]);
-	 const [darkMode, setDarkMode] = useState(false)
+	const [darkMode, setDarkMode] = useState(true)
 
  
 
@@ -39,7 +39,7 @@ function App() {
 				setInputValue={setInputValue}
 				handleSubmit={handleSubmit}
 			/>
-			<FilterButtons />
+			<FilterButtons tasks={tasks} setTasks={setTasks} />
 			<hr className="opacity-10 border-1 lg:w-[83%] md:w-[75%] md:ml-40 lg:ml-36 " />
 			<TaskList tasks={tasks} setTasks={setTasks} />
 		</>

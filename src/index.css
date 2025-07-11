@@ -2,6 +2,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 * {
-  transition: background-color 0.9s,  color 0.9s;
+  transition: 0.2s linear, background-color 0.9s,  color 0.9s;
 }
 
