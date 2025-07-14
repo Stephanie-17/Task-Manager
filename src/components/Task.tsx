@@ -8,7 +8,7 @@ interface TaskProps {
 	setTasks: React.Dispatch<React.SetStateAction<TaskObject[]>>;
 }
 const Task = ({ id, name, status, setTasks }: TaskProps) => {
-	function toggleStatus(id: number) {
+	function toggleStatus(id: number, e: React.ChangeEvent<HTMLInputElement>) {
 		setTasks((tasks) =>
 			tasks.map((task) =>
 				task.id === id
@@ -19,6 +19,8 @@ const Task = ({ id, name, status, setTasks }: TaskProps) => {
 					: task
 			)
 		);
+
+		console.log(e.currentTarget);
 	}
 
 	function deleteTask(taskToRemove: number) {
@@ -36,8 +38,9 @@ const Task = ({ id, name, status, setTasks }: TaskProps) => {
 			<div className="flex gap-3.5 items-center-safe">
 				<input
 					type="checkbox"
+					checked={status === "Completed"}
 					className="p-6 w-5 h-5 cursor-pointer accent-[#1500ff] dark:border-[#918CCF] dark:bg-[#120F24]"
-					onChange={() => toggleStatus(id)}
+					onChange={(e) => toggleStatus(id, e)}
 				/>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
